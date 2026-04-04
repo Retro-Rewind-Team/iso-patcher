@@ -9,8 +9,11 @@ Instructions for use
 Windows
 
 1.) Install wit and szs tools: (Omit this step if you have it installed already)
+
 https://wit.wiimm.de 
+
 https://szs.wiimm.de 
+
 Restart Computer
 
 2.) Copy a backup of the original "Mario Kart Wii" in this directory.

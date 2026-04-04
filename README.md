@@ -6,7 +6,7 @@ Prerequisite are to have Wiimm ISO Tools installed before use and to suply the p
 
 Instructions for use 
 
-Windows
+Windows (From Windows 7 onwards)
 
 1.) Install wit and szs tools: (Omit this step if you have it installed already)
 
@@ -27,7 +27,7 @@ Restart Computer
 
 For Linux and MAC
 
-1.) Install wit tools: http://wit.wiimm.de/  Then restart (Omit this if it is installed)
+1.) Install wit tools: https://wit.wiimm.de/  Then restart (Omit this if it is installed)
 
 2.) Copy the Retro Rewind pack into this directory (only 'RetroRewind6/...' is needed).
 

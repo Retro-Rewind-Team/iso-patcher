@@ -1,20 +1,18 @@
-# iso-patcher
-Kote's ISO patcher for Retro Rewind
-This allows the user to patch a Mario Kart Wii game back up to add the mod-pack "Retro Rewind" for use on USB Loader or Dolphin emulator.
+# Kote's ISO patcher for Retro Rewind
+This allows the user to patch a Mario Kart Wii game back up with the mod-pack "Retro Rewind" for use with USB Loader or Dolphin emulator.
 
 ## Instructions for use
+1.) Download and unpack the iso-patcher.
 
-### Windows (From Windows 7 and onwards)
+2.) Install [Wiimms ISO Tools](http://wit.wiimm.de/). Then restart your PC (Omit this if it is already installed).
 
-1.) Install [wit tools](http://wit.wiimm.de/). Then restart PC (Omit this if it is installed)
+3.) Copy the Retro Rewind pack into the iso-patcher directory (only 'RetroRewind6/...' is needed).
 
-2.) Copy the Retro Rewind pack into this directory (only 'RetroRewind6/...' is needed).
+4.) Copy a backup of the original "Mario Kart Wii" into this directory. Supported image formats: `.iso`, `.wbfs`, `.wdf`, `.wia`, `.ciso`
 
-3.) Copy a backup of the original "Mario Kart Wii" in this directory. Supported image formats: `.iso`, `.wbfs`, `.wdf`, `.wia`, `.ciso`
+5.) Linux and Mac users only: Open a terminal inside the directory and run: `chmod a+x *.sh`
 
-4.) Linux and Mac users only: Open a terminal inside the folder and run: `chmod a+x *.sh`
-
-5.) Call one of these scripts to select the output format: (Omit if you want the .wbfs format)
+6.) Call one of these scripts to select the output format: (Omit if you want the .wbfs format).
 
       set-image-type-ISO.sh   : Linux+Mac: Set output format to plain ISO
       set-image-type-WBFS.sh  : Linux+Mac: Set output format to WBFS

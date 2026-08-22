@@ -1,40 +1,18 @@
 # iso-patcher
 Kote's ISO patcher for Retro Rewind
-This will allows the user to patch Mario Kart Wii game back up to add the mod-pack "Retro Rewind" for use on USB Loader or Dolphin emulator.
+This allows the user to patch a Mario Kart Wii game back up to add the mod-pack "Retro Rewind" for use on USB Loader or Dolphin emulator.
 
-Prerequisite are to have Wiimm ISO Tools installed before use and to suply the pack "Retro Rewind" and a copy of Mario Kart Wii as ISO or WBFS format.
+## Instructions for use
 
-Instructions for use 
+### Windows (From Windows 7 and onwards)
 
-Windows (From Windows 7 onwards)
-
-1.) Install wit and szs tools: (Omit this step if you have it installed already)
-
-https://wit.wiimm.de 
-
-https://szs.wiimm.de 
-
-Restart Computer
-
-2.) Copy a backup of the original "Mario Kart Wii" in this directory.
-    Supported image formats: iso, wbfs, wdf, wia, ciso
-
-3.) Click on create-rr-xxx.bat xxx=region of the game
-
-4.) Wait until process complete
-
-5.) You found the new image in the sub directory 'new-image'
-
-For Linux and MAC
-
-1.) Install wit tools: https://wit.wiimm.de/  Then restart (Omit this if it is installed)
+1.) Install [wit tools](http://wit.wiimm.de/). Then restart PC (Omit this if it is installed)
 
 2.) Copy the Retro Rewind pack into this directory (only 'RetroRewind6/...' is needed).
 
-3.) Copy a backup of the original "Mario Kart Wii" in this directory.
-    Supported image formats: iso, wbfs, wdf, wia, ciso
+3.) Copy a backup of the original "Mario Kart Wii" in this directory. Supported image formats: `.iso`, `.wbfs`, `.wdf`, `.wia`, `.ciso`
 
-4.) Linux and Mac users only: Execute: chmod a+x *.sh
+4.) Linux and Mac users only: Open a terminal inside the folder and run: `chmod a+x *.sh`
 
 5.) Call one of these scripts to select the output format: (Omit if you want the .wbfs format)
 
@@ -42,33 +20,41 @@ For Linux and MAC
       set-image-type-WBFS.sh  : Linux+Mac: Set output format to WBFS
       set-image-type-WDF.sh   : Linux+Mac: Set output format to WDF
 
+      set-image-type-ISO.bat  : Windows: Set output format to plain ISO
+      set-image-type-WBFS.bat : Windows: Set output format to WBFS
+      set-image-type-WDF.bat  : Windows: Set output format to WDF
+
+
 6.) Call one of these scripts:
 
       create-rr-pal.sh  : Linux and Mac users, create a PAL version
       create-rr-usa.sh  : Linux and Mac users, create a NTSC/USA version
       create-rr-jpn.sh  : Linux and Mac users, create a NTSC/JAPAN version
 
-    The scripts will create a new image of selected type.
+      create-rr-pal.bat : Windows users, create a PAL version
+      create-rr-usa.bat : Windows users, create a NTSC/USA version
+      create-rr-jpn.bat : Windows users, create a NTSC/JAPAN version
 
-7.) You will find the new image in the sub directory 'new-image'.
+The scripts will create a new image of selected type.
 
-Troubleshooting
+7.) You will find the new image in the sub directory `new-image/`.
 
-"Disable all cheatcodes" error.
+## Troubleshooting
 
-This can happens if you try to load a patched Retro Rewind wbfs on USB Loader the normal way, this is because USB Loader uses more RAM than loading it from Riivolution or Retro Rewind channel.
+### "Disable all cheatcodes" error
 
-To fix it you must use a Forwarder channel to load the patched wbfs. I have a collection of forwarder channels for Retro Rewind here: http://bit.ly/3J4auhe
+This can happens if you try to load a patched Retro Rewind .wbfs on USB Loader the normal way, this is because USB Loader uses more RAM than loading it from Riivolution or Retro Rewind channel.
 
-Forwarder returning to Wii menu.
+To fix it you must use a Forwarder channel to load the patched .wbfs. I have a collection of forwarder channels for Retro Rewind here: http://bit.ly/3J4auhe
 
-To my understanding how the Wii works in software, the game must be played at least once so the Wii recognizes what is trying to play.
+### Forwarder returning to Wii menu
+
+To my understanding how the Wii works in software, has to be started at least once for the Wii to recognize it.
 Essentially to fix it you must load the game normally then you can use the forwarder.
-If the forwarder keeps returning to Wii menu make sure your USB Loader is set up correctly and using the same label as you used when you patched the game. Also only Wiiflow supports loading from SD Cards so keep that in mind.
+If the forwarder keeps returning to Wii menu make sure your USB Loader is set up correctly and is using the same label as you used when you patched the game. Also only Wiiflow supports loading from SD Cards so keep that in mind.
 
-Errors during operations
+### Errors during operations
 
-Any crashes that occurs without a dump like loading to a blackscreen seems that something went wrong during the patching process. Contact Kote3767 if there are any issues.
+Any crashes that occur without a dump like loading to a black screen indicate that something went wrong during the patching process. Contact Kote3767 if there are any issues.
 
-If the game crashes with a code dump, the crash report is saved in the Wii nand at "shared2/Pulsar/Retrorewind6/crash.pul"
-To extract it you can use WiiXplorer or FSTOOLBOX and then you can go to Retro Rewind discord server to ask.
+If the game crashes with a code dump, the crash report is saved in the Wii NAND at "shared2/Pulsar/Retrorewind6/crash.pul". To extract it you can use WiiXplorer or FSTOOLBOX and then you can go to Retro Rewind discord server to ask for help.
